@@ -34,25 +34,25 @@ Select Cocoa Touch Class Click on Next Button.
 
 **Step 6:** In ViewController.swift file
 (Implement code as below)
-import UIKit
-class ViewController: UIViewController {
-@IBOutlet var tf1:UITextField!
-@IBOutlet var b1:UIButton!
-override func viewDidLoad() {
-super.viewDidLoad()
-// Do any additional setup after loading the view.
-self.title = "Data Transfer"
-}
-@IBAction func b1click(){
-}
-override func prepare(for segue:
-UIStoryboardSegue, sender: Any?) {
-let destination1 = segue.destination as!
-secondViewController
-destination1.string1 = tf1.text
-destination1.string2 = "img1.jpeg”
-}
-}
+  import UIKit
+  class ViewController: UIViewController {
+  @IBOutlet var tf1:UITextField!
+  @IBOutlet var b1:UIButton!
+  override func viewDidLoad() {
+  super.viewDidLoad()
+  // Do any additional setup after loading the view.
+  self.title = "Data Transfer"
+  }
+  @IBAction func b1click(){
+  }
+  override func prepare(for segue:
+  UIStoryboardSegue, sender: Any?) {
+  let destination1 = segue.destination as!
+  secondViewController
+  destination1.string1 = tf1.text
+  destination1.string2 = "img1.jpeg”
+  }
+  }
 
 In secondViewController.swift file (Implement code as below)
 import UIKit
