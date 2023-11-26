@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab9_StackViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="O3B-ha-a7F">
+                                <rect key="frame" x="76" y="139" width="263" height="454"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DIZ-Es-hxK">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="2FP-ag-RvO"/>
+                                            <constraint firstAttribute="width" constant="263" id="UwR-X4-fk3"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Bengaluru"/>
+                                            <segment title="Hyderabad"/>
+                                            <segment title="Mumbai"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segementcontrolclick:" destination="BYZ-38-t0r" eventType="valueChanged" id="upZ-7u-7sY"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bengaluru" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMg-k0-kQa">
+                                        <rect key="frame" x="0.0" y="90" width="263" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0p4-Jx-UlV">
+                                        <rect key="frame" x="0.0" y="169.33333333333331" width="263" height="97.666666666666686"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="97.670000000000002" id="HPI-en-Tnv"/>
+                                            <constraint firstAttribute="width" constant="263" id="whP-fp-HXk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="By5-8F-51F">
+                                        <rect key="frame" x="0.0" y="326" width="263" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="263" id="BPe-xG-AxM"/>
+                                            <constraint firstAttribute="height" constant="128" id="u30-OL-hDx"/>
+                                        </constraints>
+                                        <string key="text">Bengaluru, also known as Bangalore, is the capital city of the Indian state of Karnataka. Renowned as the "Silicon Valley of India," Bengaluru is a major hub for information technology and is home to numerous tech companies, startups, and multinational corporations. The city has experienced rapid growth and urbanization, evolving into a cosmopolitan metropolis while retaining its historic charm.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="454" id="1LQ-eT-LgN"/>
+                                    <constraint firstAttribute="width" constant="263" id="88a-O2-QSa"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O3B-ha-a7F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="U3v-1R-rYE"/>
+                            <constraint firstItem="O3B-ha-a7F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="dfN-tS-rCf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O3B-ha-a7F" secondAttribute="trailing" constant="54" id="vDm-Uc-WiE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="i1" destination="0p4-Jx-UlV" id="s4m-S0-gvu"/>
+                        <outlet property="l1" destination="zMg-k0-kQa" id="hE0-lQ-BFk"/>
+                        <outlet property="sc1" destination="DIZ-Es-hxK" id="Lug-Lj-oX3"/>
+                        <outlet property="sv1" destination="O3B-ha-a7F" id="xUE-yw-cqf"/>
+                        <outlet property="t1" destination="By5-8F-51F" id="fL4-8A-0nE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78.625954198473281" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
